@@ -185,7 +185,7 @@ $ ls -la
 * 加入Jserv的課程社團 [2025 年系統軟體系列課程討論區](https://www.facebook.com/groups/system.software2025/)
   * [成功大學資工系(所) Wiki 系統](https://wiki.csie.ncku.edu.tw/Homepage)
   * Jserv的專長主要在OS/硬體/Linux/系統底層開發
-* [youtube](https://www.youtube.com/@sysprog/videos)，老師都是線上課程
+* [youtube](https://www.youtube.com/@sysprog/videos)，老師的線上課程頻道
 
 
 ## 如何在申請大學加分(TODO)
