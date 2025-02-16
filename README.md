@@ -22,17 +22,21 @@
     * 如果有興趣可繼續準備APCS或是當資訊競賽的選手
 * 做Line的聊天機器人
 
+## git
+* 一種文字檔案的版本控管程式
+* 可以使用VScode/Linux命令行/圖形化支援工具來使用
+* 建議用VScode入門，能力所及就了解Linux命令行
+  
+
 ## Github
+* it程式的儲存庫網站，有程式的每次修改紀錄
 * 可以用git程式做版本控管並儲存程式碼
 * 可以免費的建立個人網頁
 * 可以寫技術部落格
 * 可以參與其他人的程式碼
 * 提供免費自動化服務，比如自動測試寫完的程式碼
 
-## Git
-* 用來對文字尤其是程式版本控管
-* 可以使用VScode/Linux命令行/圖形化支援工具來使用
-* 建議用VScode入門，能力所及就了解Linux命令行
+
 
 ## VScode
 * VScode是資訊界主流的編輯器，專門處理文字
@@ -45,8 +49,9 @@
 ### 簡介
 * 業界主流的開源作業系統
 * 方便的用命令行控制電腦
-* Linux是OS的核心，有依據核心發展出自己的Linux版本
+* Linux是作業系統的核心(Kernel)，各廠商會依據核心發展出自己的Linux發行版(distribution)
     * 這裡推薦使用Ubuntu，方便上手，也是免費的
+    * 我們實際會用到的Linux都是Linux發行版
 
 ### 優勢，為什麼要學Linux
 * 有眾多開發者提供的免費開發工具
@@ -66,13 +71,56 @@
 * 支援遊戲少，不完美支援Windows辦公室軟體，有些設備不支援Linux
 
 ### 命令行範例
-* todo
+* 以移動檔案/重新命名檔案/展示資料夾所有檔案為例
+  * Windows移動檔案是用滑鼠拖拉到其他地方
+  * Windows重新命名是右鍵重新命名
+  * Windows展示資料夾所有檔案是點開資料夾，如果想看隱藏檔案，要去我的電腦中做設置
+* 以下為Linux中的範例
+  * `$`僅表示現在的權限為一般使用者在下命令
+
+``` sh
+# 移動檔案
+# 表示把現在路徑下的this_file，移動到資料夾new_dir，之後路徑變new_dir/this_file
+$ mv this_file new_dir/
+
+# 重新命名
+# 移動指令同時可改名，把old_file_name檔名改成new_file_name
+$ mv old_file_name new_file_name
+
+# 展示目前資料夾下所有檔案
+$ ls
+
+# 展示所有檔案細節，包含隱藏檔案
+# 一樣的命令，用參數即可調整功能，不用額外背操作
+# -la為功能參數，-a代表連隱藏檔都要看，-l代表要看更多細節如權限/擁有者/創建日期
+# 用 man ls，就可以知道ls的所有參數用法
+$ ls -la
+
+# 命令行百百種，初期學基本操作就好，不知道功能問GPT
+# 如 ls, cd, pwd, cp, rm, cat, mv , touch, mkdir, man, sudo.
+```
+### 取得Linux操作環境
+* 瀏覽器可在用[JSLinux](https://bellard.org/jslinux/)
+* APP可以下載Termux
+* 在實體筆電上安裝Ubuntu
+  * 可選[雙系統](https://www.youtube.com/watch?v=yMHOpOuyjdc)
+    * 如果安裝時把windows的空間刪掉就是單系統
+  * 安裝流程大致如下:
+    * 從Ubuntu網站下載[Ubuntu Desktop](https://ubuntu.com/download/desktop) ISO檔
+    * 準備一個隨身碟當開機碟
+    * 下載Rufus把Ubuntu放到隨身碟中變為開機碟
+    * 如果要設定雙系統要進行磁碟切割(可選)
+    * 去Google搜尋一下筆電廠牌開機時用什麼按鍵進入BIOS，如Lenovo用F1
+    * 插上開機碟，重開機時進入BIOS選擇剛剛插入的隨身碟開機
+    * 進入Ubuntu安裝畫面後，就依據指引填資料，安裝結束就得到一台Ubuntu電腦
+* 在virtualbox上安裝Ubuntu虛擬機，參考[教學](https://www.youtube.com/watch?v=Hva8lsV2nTk)
+* 在Windows上安裝WSL，參考[教學](https://www.youtube.com/watch?v=fucKUKsv7Q4)
+
 ### 學習
 *  [鳥哥的Linux私房菜](https://linux.vbird.org/)
-*  建立一個Linux環境練習
-*  todo
+*  在命令行上用man就可以知道指令用法
+*  [archlinux document](https://archlinux.org/)
 
-### 安裝自己的Linux
 ### 作業系統比較
 #### MacOS
 * MacOS跟Linux操作界面相似，所以MacOS是工程師開發的主流
@@ -93,27 +141,45 @@
     * 伺服器可以是另一台實體電腦，或是裝在同一台電腦的虛擬機
 * 以Linux出廠的電腦比較少，通常都是拿二手Windows重灌成Linux
     * 以Linux當作主要開發的電腦學習，可以成長很多
-    * 建議用Ubuntu入門
-
-
+    * 建議用Ubuntu入門，Ubuntu的操作跟安裝都有善，也是主流
 
 ## 語言選擇
 > 不管學什麼程式語言，英文才是最重要的
+> 有什麼問題GPT大多能回答
 
 ### C
+* 可以精準學習基本資訊科學知識，如記憶體管理/資料結構/作業系統
+* 可以用來開發/學習Linux kernel
+  * 所謂的嵌入式工程師，也是開發Linux相關應用
+  * 台灣軟體業薪水最高的大概是寫C的工程師
+  * C大概是壽命最常的語言
+* 推薦可以先學C，可能有點難，是因為他被設計來寫作業系統的，如Linux是C寫的
+* 資源
+  * [The C Programming Language, 2/e ](https://www.tenlong.com.tw/products/9780131103627)
+  * [C 語言入門影片課程](https://www.youtube.com/watch?v=yWPGumB64tM&list=PLY_qIufNHc293YnIjVeEwNDuqGo8y2Emx)
 ### C++
+* 用來寫高效率的程式
+  * 遊戲的高效能引擎通常用C++
+* 學生的程式競賽C++是主流
+* C vs C++
+  * C++相比C多了很多進階語法跟內建套件，所以很好的管理程式
+  * 但因為套件語法多了，每個人寫法不一樣容易出錯，故需要穩定的程式如作業系統選C
 ### Python
+* 語法簡單，如果想要快速學一門語言，Python是首選
+* 如果是要開發AI/伺服器應用/聊天機器人，選Python
 ### JavaScript
+* 如果想要做一個自己的專屬網站，選JavaScript
+  * 做網站的視覺少不掉還要學HTML(文字), CSS(樣式)
 
 
-## 資訊科學學科
+## 資訊科學學科(TODO)
  *  [計算機概論](https://www.youtube.com/watch?v=EDYjPpn1OmE&list=PLil-R4o6jmGiDc1CC8PyBbasl8kR9r8Wr)
  * 基本資料結構知識
  * 基本作業系統知識
  * 基本演算法
 
 
-## Linux原始碼學習
+## Linux原始碼學習(TODO)
  
 ### Jserv課程
 * 加入Jserv的課程社團 [2025 年系統軟體系列課程討論區](https://www.facebook.com/groups/system.software2025/)
@@ -122,6 +188,6 @@
 * [youtube](https://www.youtube.com/@sysprog/videos)，老師都是線上課程
 
 
-## 如何在申請大學加分
+## 如何在申請大學加分(TODO)
 * 貢獻知名原始碼，獲得專案維護者的認可
 * 在某一個國際會議做講者
