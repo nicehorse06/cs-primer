@@ -92,7 +92,7 @@
 * 以下為Linux中的範例
   * $僅表示現在的權限為一般使用者在下命令
 
-sh
+``` sh
 # 移動檔案
 # 表示把現在路徑下的this_file，移動到資料夾new_dir，之後路徑變new_dir/this_file
 $ mv this_file new_dir/
@@ -112,6 +112,7 @@ $ ls -la
 
 # 命令行百百種，初期學基本操作就好，不知道功能問GPT
 # 如 ls, cd, pwd, cp, rm, cat, mv , touch, mkdir, man, sudo.
+```
 
 ### 取得Linux操作環境
 * 瀏覽器可在用[JSLinux](https://bellard.org/jslinux/)
